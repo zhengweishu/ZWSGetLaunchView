@@ -7,6 +7,7 @@
 //
 
 #import "ZWSViewController.h"
+#import "ZWSGetLaunchView.h"
 
 @interface ZWSViewController ()
 
@@ -17,13 +18,36 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self printUILaunchImageName];
+
+    // 方法1：如果要适配iOS7，可以删除LaunchScreen.storyboard
+//    [self.view addSubview:[ZWSGetLaunchView getFromLaunchImages]];
+    
+    // 方法2：如果适配iOS8及以上，可以不用配置LaunchImages
+    [self.view addSubview:[ZWSGetLaunchView getFromLaunchScreen]];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
 }
+
+- (void)printUILaunchImageName
+{
+    NSInteger osVersion = floor([[[UIDevice currentDevice] systemVersion] floatValue])*100;
+    NSString *key;
+    if (osVersion >= 700) {
+        key = @"UILaunchImages";
+    } else {
+        key = @"UILaunchImageFile";
+    }
+    NSArray *array = [[[NSBundle mainBundle] infoDictionary] valueForKey:key];
+    NSLog(@"%@",array);
+}
+
+
+
+
 
 @end

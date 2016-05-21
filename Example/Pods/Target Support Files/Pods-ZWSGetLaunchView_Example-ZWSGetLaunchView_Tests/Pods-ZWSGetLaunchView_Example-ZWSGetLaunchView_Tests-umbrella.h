@@ -1,0 +1,6 @@
+#import <UIKit/UIKit.h>
+
+
+FOUNDATION_EXPORT double Pods_ZWSGetLaunchView_Example_ZWSGetLaunchView_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_ZWSGetLaunchView_Example_ZWSGetLaunchView_TestsVersionString[];
+

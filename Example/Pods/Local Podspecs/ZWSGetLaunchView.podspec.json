@@ -1,0 +1,22 @@
+{
+  "name": "ZWSGetLaunchView",
+  "version": "1.0.0",
+  "summary": "获取启动页",
+  "description": "获取启动页.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/ZWSGetLaunchView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhengweishu": "git@zhengweishu.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/ZWSGetLaunchView.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": "ZWSGetLaunchView/Classes/**/*"
+}

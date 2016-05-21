@@ -4,9 +4,9 @@ target 'ZWSGetLaunchView_Example' do
   pod 'ZWSGetLaunchView', :path => '../'
 
   target 'ZWSGetLaunchView_Tests' do
-    inherit! :search_paths
+  pod 'ZWSGetLaunchView', :path => '../'
 
-    pod 'Specta'
+  pod 'Specta'
   pod 'Expecta'
   pod 'FBSnapshotTestCase'
   pod 'Expecta+Snapshots'

@@ -1,0 +1,6 @@
+framework module ZWSGetLaunchView {
+  umbrella header "ZWSGetLaunchView-umbrella.h"
+
+  export *
+  module * { export * }
+}
